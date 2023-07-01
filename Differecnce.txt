@@ -1,0 +1,8 @@
+
+The two codes have similar functionalities, which is real-time face detection using a Haar cascade classifier. However, there are some key differences between them:
+
+Face Detection Algorithm: The first code uses the Haar cascade classifier provided by OpenCV (cv2.CascadeClassifier) for face detection. The second code also utilizes the Haar cascade classifier for face detection.
+
+Additional Face Recognition Model: The second code includes an additional step of face recognition using a pre-trained CNN model (keras_model.h5). After detecting a face, it extracts the face region, preprocesses it, and passes it through the CNN model to predict whether it is a face or not. It then displays the label and confidence score on the frame. The first code does not involve face recognition and only focuses on face detection using the cascade classifier.
+
+Accuracy Metrics: The second code calculates accuracy metrics such as accuracy, precision, and recall. It keeps track of ground truth labels (assuming all detections are faces) and predicted labels (based on the face recognition model's output). After the face detection loop, it calculates these metrics using functions from scikit-learn (accuracy_score, precision_score, recall_score) and prints them. The first code does not include accuracy metrics calculation.
